@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+  display: grid;
+  font-family: sans-serif;
+  place-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+
+div {
+  border-radius: 1rem;
+  background-color: #fff;
+  width: 14rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+

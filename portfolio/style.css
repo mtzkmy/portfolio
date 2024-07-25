@@ -76,6 +76,32 @@ h2 {
   line-height: 70px;
 }
 
+/* アイコン */
+.Q {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 0;
+  margin: 20px 40px 0 20px;
+}
+
+.Q:hover {
+  top: -10px;
+  transition: 0.4s;
+}
+
+
+.G {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 0;
+}
+
+.G:hover {
+  top: -10px;
+  transition: 0.4s;
+}
 
 /* 職歴 */
 #history {
