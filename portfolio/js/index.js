@@ -15,11 +15,18 @@ const skyObserver = new IntersectionObserver(showsky);
 // skyを監視するように指示
 skyObserver.observe(document.querySelector('#sky'));
 
+
 // footer画像のアニメーション
 // .itemの配列要素を個別に取得
 const imgItem = document.querySelectorAll('.item');
 
-for(let i = 0; i < imgItem.length; i++){
+// 監視対象が範囲に交差したら実行する
+const showItem = (entries) => {
+
+entries.forEach(entry => {
+  if(entry.isIntersecting) {
+ 
+// for(let i = 0; i < imgItem.length; i++){
   const keyframes = {
     // 定数keyframesで画像の透明度を指定する
     opacity: [0, 1],
@@ -31,6 +38,17 @@ for(let i = 0; i < imgItem.length; i++){
   // fill: 'forwards'はキーフレームの状態を保持するという意味
     fill: 'forwards',
   };
-imgItem[i].animate(keyframes, option);
-}
+// imgItem[i].animate(keyframes, option);
+// }
 
+entry.target.animate(keyframes, option);
+}
+});
+};
+// 監視の設定
+const itemObserver = new IntersectionObserver(showItem);
+// 各itemに対して監視するようにする
+imgItem.forEach(item => itemObserver.observe(item));
+
+// // 監視するように指示
+// itemObserver.observe(document.querySelector('.item'));

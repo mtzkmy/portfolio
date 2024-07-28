@@ -113,6 +113,10 @@ h2 {
   display: flex;
 }
 
+span {
+  font-weight: bold;
+}
+
 /* footer */
 footer {
   margin-top: 120px;
