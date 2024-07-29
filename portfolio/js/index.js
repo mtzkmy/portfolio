@@ -35,6 +35,7 @@ entries.forEach(entry => {
 // 再生時間の指定
   const option = {
     duration: 800,
+  
   // fill: 'forwards'はキーフレームの状態を保持するという意味
     fill: 'forwards',
   };
@@ -50,5 +51,3 @@ const itemObserver = new IntersectionObserver(showItem);
 // 各itemに対して監視するようにする
 imgItem.forEach(item => itemObserver.observe(item));
 
-// // 監視するように指示
-// itemObserver.observe(document.querySelector('.item'));
