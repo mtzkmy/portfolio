@@ -1,3 +1,20 @@
+const aboutMain = document.querySelector('#about-main');
+
+const keys = {
+  color: ['transparent', '#fff'],
+  backgroundPosition: ['100% 0', '0 0'],
+};
+
+const op = {
+  duration: 1000,
+  easing: 'ease',
+};
+
+aboutMain.animate(keys, op);
+
+
+
+
 // 監視対象が範囲に現れたら実行する動作
 const showsky = (entries) => {
   const keyframes = {

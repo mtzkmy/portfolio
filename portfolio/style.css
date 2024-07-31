@@ -72,8 +72,9 @@ h2::after {
   background-color: #ffd700;
 }
 
-h2 {
+#about-main {
   line-height: 70px;
+  background: linear-gradient(90deg, #ffc966, #ffc966 50%, #fff 50%, #fff);
 }
 
 /* アイコン */
