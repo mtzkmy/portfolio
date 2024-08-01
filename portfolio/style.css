@@ -64,20 +64,22 @@ h1 {
   margin-bottom: 150px;
 }
 
-h2::after {
+/* h2::after {
   content: '';
   display: block;
   width: 50px;
   height:5px;
   background-color: #ffd700;
-}
+} */
 
 #about-main {
   line-height: 70px;
-  background: linear-gradient(90deg, #ffc966, #ffc966 50%, #fff 50%, #fff);
+  background: linear-gradient(90deg, #ffe4c4, #ffe4c4 50%, #fff 50%, #fff);
+  background-size: 200% 100%;
+  padding: .1rem 1rem;
+  color: #ff8c00;
 }
 
-/* アイコン */
 .Q {
   width: 40px;
   height: 40px;
@@ -117,6 +119,13 @@ h2::after {
 span {
   font-weight: bold;
   padding-right: 40px;
+}
+
+.work-main {
+  background: linear-gradient(90deg, #87cefa 50%, #fff 50%, #fff);
+  color: #009afa;
+  padding: .1rem 1rem;
+  background-size: 200% 100%;
 }
 
 /* footer */

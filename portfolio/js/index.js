@@ -1,3 +1,4 @@
+// 自己紹介のアニメ
 const aboutMain = document.querySelector('#about-main');
 
 const keys = {
@@ -7,11 +8,25 @@ const keys = {
 
 const op = {
   duration: 1000,
+  // アニメが変化する速度、タイミング（開始と終了を緩やかに）
   easing: 'ease',
 };
 
 aboutMain.animate(keys, op);
 
+// 職歴のアニメ
+const workMain = document.querySelector('.work-main');
+const move = {
+  color: ['transparent', '#fff'],
+  backgroundPosition: ['-100% 0', '0 0'],
+};
+
+const choice = {
+  duration: 1000,
+  easing: 'ease',
+};
+
+workMain.animate(move, choice);
 
 
 
