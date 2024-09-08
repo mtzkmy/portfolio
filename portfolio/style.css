@@ -126,6 +126,7 @@ span {
   color: #009afa;
   padding: .1rem 1rem;
   background-size: 200% 100%;
+  line-height: 70px;
 }
 
 /* footer */

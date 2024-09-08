@@ -15,18 +15,31 @@ const op = {
 aboutMain.animate(keys, op);
 
 // 職歴のアニメ
-const workMain = document.querySelector('.work-main');
-const move = {
-  color: ['transparent', '#fff'],
-  backgroundPosition: ['-100% 0', '0 0'],
+
+//監視対象が現れたらすること
+const History = (entries) => {
+  const move = {
+    color: ['transparent', '#fff'],
+    backgroundPosition: ['100% 0', '0 0'],
+  };
+  
+  const choice = {
+    duration: 1000,
+    easing: 'ease',
+  };
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.animate(move, 3000);
+    }
+  });
 };
 
-const choice = {
-  duration: 1000,
-  easing: 'ease',
-};
+// 監視設定
+const history = new IntersectionObserver(History);
 
-workMain.animate(move, choice);
+history.observe(document.querySelector('#history'));
+
+
 
 
 
