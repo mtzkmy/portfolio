@@ -29,7 +29,7 @@ const History = (entries) => {
   };
   entries.forEach(entry => {
     if(entry.isIntersecting){
-      entry.target.animate(move, 3000);
+      entry.target.animate(move, choice);
     }
   });
 };
@@ -37,7 +37,7 @@ const History = (entries) => {
 // 監視設定
 const history = new IntersectionObserver(History);
 
-history.observe(document.querySelector('#history'));
+history.observe(document.querySelector('.work-main'));
 
 
 
